@@ -1,0 +1,13 @@
+.header {
+  block-size: var(--headerSize);
+  padding: 1rem;
+  background-color: var(--grey-4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-primary, .header-secondary {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}

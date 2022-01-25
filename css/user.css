@@ -1,0 +1,41 @@
+.user {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  /* flex-direction: column; */
+}
+
+.user p span {
+  display: block;
+}
+
+.user img {
+  border: 1px solid red;
+  /* border-inline-start: none; */
+  border-radius: 50%;
+  /* border-start-start-radius: 50px; */
+  /* border-start-end-radius: 50px; */
+  /* border-end-start-radius: 50px; */
+  /* border-end-end-radius: 50px; */
+}
+
+.user .user-avatar {
+  border: 1px solid green;
+}
+
+.user-name {
+  font: var(--body-16regular);
+}
+
+
+
+
+.user-status {
+  font: var(--caption-12regular);
+  color: var(--grey);
+}
+
+/* .user p {
+  margin-left: 1rem;
+} */

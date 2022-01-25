@@ -1,0 +1,224 @@
+.user {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  /* flex-direction: column; */
+}
+
+.user p span {
+  display: block;
+}
+
+.user img {
+  border: 1px solid red;
+  /* border-inline-start: none; */
+  border-radius: 50%;
+  /* border-start-start-radius: 50px; */
+  /* border-start-end-radius: 50px; */
+  /* border-end-start-radius: 50px; */
+  /* border-end-end-radius: 50px; */
+}
+
+.user .user-avatar {
+  border: 1px solid green;
+}
+
+.user-name {
+  font: var(--body-16regular);
+}
+
+.user-status {
+  font: var(--caption-12regular);
+  color: var(--grey);
+}
+
+/* .user p {
+  margin-left: 1rem;
+} */
+
+.header {
+  block-size: var(--headerSize);
+  padding: 1rem;
+  background-color: var(--grey-4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-primary, .header-secondary {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.chat {
+  /* border: 10px solid red; */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  block-size: 100vh;
+}
+
+.chat>* {
+  /* border: 4px solid green; */
+}
+
+.action-list {
+  block-size: var(--actionsSize);
+}
+
+.message {
+  /* border: 1px solid red; */
+  background: white;
+  padding: .5rem;
+  font: var(--body-16regular);
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  position: relative;
+}
+
+.message-text {
+  margin: 0;
+}
+
+.message.is-receiver {
+  background-color: var(--white);
+  align-self: flex-start;
+  border-radius: 0 .5rem .5rem .5rem;
+}
+
+.message.is-receiver::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 100%;
+
+  /* background: red; */
+
+
+  inline-size: 12px;
+  block-size: 12px;
+  box-sizing: border-box;
+  -webkit-border-start: 6px solid transparent;
+          border-inline-start: 6px solid transparent;
+  -webkit-border-end: 6px solid white;
+          border-inline-end: 6px solid white;
+  -webkit-border-before: 6px solid white;
+          border-block-start: 6px solid white;
+  -webkit-border-after: 6px solid transparent;
+          border-block-end: 6px solid transparent;
+
+
+  /* border-radius: 10px 0 0 0; */
+
+}
+
+.message.is-sender {
+  background-color: var(--green-1);
+  align-self: flex-end;
+  border-radius: .5rem 0rem .5rem .5rem;
+
+
+}
+
+.message.is-sender::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 100%;
+  /* background: red; */
+
+  inline-size: 12px;
+  block-size: 12px;
+  box-sizing: border-box;
+  -webkit-border-start: 6px solid var(--green-1);
+          border-inline-start: 6px solid var(--green-1);
+  -webkit-border-end: 6px solid transparent;
+          border-inline-end: 6px solid transparent;
+  -webkit-border-before: 6px solid var(--green-1);
+          border-block-start: 6px solid var(--green-1);
+  -webkit-border-after: 6px solid transparent;
+          border-block-end: 6px solid transparent;
+
+}
+
+.message-date {
+  font: var(--caption-12regular);
+  color: var(--grey);
+}
+
+.message-status {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.message-status.is-dobleCheck {
+  background-image: url('../images/doble-check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.message-details {
+  /* float: right; */
+  display: flex;
+  justify-content: flex-end;
+  gap: .25rem;
+}
+
+.date {
+  background-color: #E5F2FA;
+  border-radius: .5rem;
+  padding: .625rem;
+  font: var(-body-16regular);
+  align-self: center;
+}
+
+.message-list {
+  flex-grow: 1;
+  /* border: 10px solid blue; */
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-image: url('../images/background.jpg');
+  /* align-items: center; */
+}
+
+:root {
+  --headerSize: 80px;
+  --actionsSize: 80px;
+  font-size: 16px;
+
+  --black: #000000;
+  --grey: #666667;
+  --grey-2: #f2f2f2;
+  --grey-3: #f6f6f6;
+  --grey-4: #ededed;
+  --white: #ffffff;
+  --green-1: #e1f7cb;
+  --green-2: #56bca6;
+  --red: #ff4a4a;
+  --green-3: #429488;
+  --blue: #5cb3f0;
+  --body-16regular: 400 1rem/1.25rem Inter;
+  --body-16bold: 700 1rem/1.25rem Inter;
+  --body-14regular: 400 0.875rem/1.125rem Inter;
+  --body-14regular_u: 500 0.875rem/1.25rem Inter;
+  --caption-12bold: 700 0.75rem/1rem Inter;
+  --caption-12regular: 400 0.75rem/1rem Inter;
+  --caption-12regular_u: 400 0.75rem/1.25rem Inter;
+
+}
+
+body {
+  /* font-size: 2rem; */
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+

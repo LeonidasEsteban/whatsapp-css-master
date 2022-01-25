@@ -1,0 +1,13 @@
+.chat {
+  /* border: 10px solid red; */
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  grid-area: chat;
+}
+
+.chat>* {
+  /* border: 4px solid green; */
+}

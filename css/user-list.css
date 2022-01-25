@@ -1,0 +1,4 @@
+.user-list {
+  border: 10px solid green;
+  grid-area: user-list;
+}
